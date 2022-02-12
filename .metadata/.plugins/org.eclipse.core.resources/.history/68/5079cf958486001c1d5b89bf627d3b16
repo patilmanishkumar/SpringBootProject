@@ -1,0 +1,6 @@
+package com.ttl.springrest.springrest.controller;
+
+@Controller
+public class MyController {
+
+}

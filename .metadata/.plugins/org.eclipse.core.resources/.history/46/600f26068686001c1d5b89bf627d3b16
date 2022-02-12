@@ -1,0 +1,5 @@
+package com.ttl.springrest.springrest.entities;
+
+public class Course {
+
+}

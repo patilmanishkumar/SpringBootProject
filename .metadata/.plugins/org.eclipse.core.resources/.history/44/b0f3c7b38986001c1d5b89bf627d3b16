@@ -1,0 +1,24 @@
+package com.ttl.springrest.springrest.services;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import com.ttl.springrest.springrest.entities.Course;
+
+@Service
+public class CourseServiceImpl implements CourseService {
+
+	List<Course> list;
+	public CourseServiceImpl() {
+		list=new ArrayList<>();
+		list.add(new Course(101 , "CoreJava" ,"it consist of basics of java"));
+		list.add(new Course(102 , "SQL" ,"this is structured query lang"));
+	}
+	
+	@Override
+	public List<Course> getCourses() {
+		// TODO Auto-generated method stub
+		return list;
+	}
+
+}

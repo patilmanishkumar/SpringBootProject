@@ -1,0 +1,10 @@
+package com.ttl.springrest.springrest.services;
+import java.util.List;
+
+import com.ttl.springrest.springrest.entities.Course;
+
+public interface CourseService {
+	
+	public List<Course> getCourses();
+	
+}

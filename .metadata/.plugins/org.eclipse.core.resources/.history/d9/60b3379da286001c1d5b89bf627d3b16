@@ -1,0 +1,9 @@
+package com.ttl.springrest.springrest.dao;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import com.ttl.springrest.springrest.entities.Course;
+
+public interface CourseDao extends JpaRepository<Course , Long > {
+
+}

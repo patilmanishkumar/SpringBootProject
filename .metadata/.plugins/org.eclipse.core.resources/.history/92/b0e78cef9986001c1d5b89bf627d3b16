@@ -1,0 +1,66 @@
+package com.ttl.springrest.springrest.services;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import org.springframework.stereotype.Service;
+
+import com.ttl.springrest.springrest.entities.Course;
+
+@Service
+public class CourseServiceImpl implements CourseService {
+
+	List<Course> list;
+	public CourseServiceImpl() {
+		list=new ArrayList<>();
+		list.add(new Course(101 , "CoreJava" ,"it consist of basics of java"));
+		list.add(new Course(102 , "SQL" ,"this is structured query lang"));
+	}
+	
+	@Override
+	public List<Course> getCourses() {
+		// TODO Auto-generated method stub
+		return list;
+	}
+
+	@Override
+	public Course getCourse(long courseId) {
+		// TODO Auto-generated method stub
+		
+		Course c = null;
+		for(Course course:list)
+		{
+			if(course.getId()==courseId)
+			{
+				c=course;
+				break;
+			}
+		}
+		return c;
+	}
+
+	@Override
+	public Course addCourse(Course course) {
+		// TODO Auto-generated method stub
+		list.add(course);
+		return course;
+	}
+
+	@Override
+	public Course updateCourse(Course course) {
+		list.forEach(e -> {
+			if(e.getId()==course.getId()) {
+				e.setTitle(course.getTitle());
+				e.setDescription(course.getDescription());
+			}
+		});
+		return course;
+	}
+
+	@Override
+	public void deleteCourse(long parseLong) {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

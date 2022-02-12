@@ -1,0 +1,5 @@
+package com.ttl.springrest.springrest.dao;
+
+public interface CourseDao {
+
+}
